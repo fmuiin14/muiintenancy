@@ -21,7 +21,7 @@
 
             <!-- Domain -->
             <div class="mt-4">
-                <x-label for="domain" :value="__('Domain')" />
+                <x-label for="domain" :value="__('form.subdomain')" />
 
                 <div class="flex items-baseline">
                     <x-input id="domain" class="block mt-1 mr-2 w-full" type="text" name="domain" :value="old('domain')" required />
@@ -32,14 +32,14 @@
 
             <!-- Name -->
             <div class="mt-4">
-                <x-label for="name" :value="__('Name')" />
+                <x-label for="name" :value="__('form.fullname')" />
 
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
             </div>
 
             <!-- Email Address -->
             <div class="mt-4">
-                <x-label for="email" :value="__('Email')" />
+                <x-label for="email" :value="__('form.email')" />
 
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
@@ -67,7 +67,7 @@
 
 
                 <x-button class="ml-4">
-                    {{ __('Register') }}
+                    {{ __('form.register') }}
                 </x-button>
             </div>
         </form>

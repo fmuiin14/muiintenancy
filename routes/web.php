@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => '\App\Http\Controllers\LanguageController@switchLang']);
 Route::get('/register', [RegisteredTenantController::class, 'create']);
 Route::post('/register', [RegisteredTenantController::class, 'store']);
 // register create a tenant

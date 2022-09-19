@@ -17,6 +17,18 @@
     </head>
     <body>
         <div class="font-sans text-gray-900 antialiased">
+
+            <div class="">
+                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                            @foreach (Config::get('languages') as $lang => $language)
+                            <a href="{{ route('lang.switch', $lang) }}" style="@if (App::getLocale() == $lang)
+                            font-weight:bold
+                        @else
+                        @endif" class="text-sm text-gray-700 dark:text-gray-500 underline">{{$language}}</a>
+                        @endforeach
+                </div>
+        </div>
+
             {{ $slot }}
         </div>
     </body>

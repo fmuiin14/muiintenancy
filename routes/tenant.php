@@ -36,6 +36,8 @@ Route::group([
         return view('dashboard');
     })->middleware(['auth'])->name('dashboard');
 
+    Route::get('lang/{lang}', ['as' => 'lang.switch', 'uses' => '\App\Http\Controllers\LanguageController@switchLang']);
+
     Route::middleware('guest')->group(function () {
 
         Route::get('login', [AuthenticatedSessionController::class, 'create'])
