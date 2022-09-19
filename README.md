@@ -20,4 +20,5 @@ I use Windows, and I use laragon to open this project.
 11. Continue the registration, and after registration you will redirect to the subdomain.domain.local 
 
 ## Notes
+- If you faced error: Tenant could not be identified on domain, please check central_domains on config\tenancy.php . Make sure central_domains same with your url setup on your computer.
 - Please feel free to let me know if you have any questions. Thank you.
