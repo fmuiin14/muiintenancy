@@ -2,9 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tenant;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rules\Password;
+use App\Http\Requests\RegisterTenantRequest;
 
 class RegisteredTenantController extends Controller
 {
-    //
+    public function create()
+    {
+        return view('auth.register');
+    }
+
+    public function store(RegisterTenantRequest $request)
+    {
+        $tenant = Tenant::create($request->validated());
+        $tenant->createDomain(['domain' => $request->domain]);
+    }
 }
