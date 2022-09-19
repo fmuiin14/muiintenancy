@@ -13,11 +13,11 @@ I use Windows, and I use laragon to open this project.
 4. After that, run 'php artisan key:generate'
 5. Setup DB_DATABASE on .env (create the database)
 6. Run 'php artisan migrate' on your terminal
-7. Make sure APP_URL=http://fmayi.local and SESSION_DOMAIN=fmayi.local on your .env (need same value for doing localization correctly)
+7. Make sure your SESSION_DOMAIN on your .env same with your url for this project(example, on this project SESSION_DOMAIN=muiintenancy.local) (need same value for doing localization correctly)
 8. Open your laragon, then Start All. 
-9. Click the Log in or Register, localization working correctly on this project
-10. Choose language that you want (English, Indonesia, or Spain)
+9. Go to url http://muiintenancy.local/register
+10. you can try, Localization working correctly on this project. Choose language that you want (English, Indonesia, or Spain)
 11. Continue the registration, and after registration you will redirect to the subdomain.domain.local 
 
 ## Notes
-- If after registration your page display error, you need to configuration your server first (using Apache or Nginx)
+- Please feel free to let me know if you have any questions. Thank you.
